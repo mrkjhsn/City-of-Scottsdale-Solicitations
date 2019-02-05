@@ -9,5 +9,11 @@ The Solicitations dataset displays guidlines for businesses to submit bids for s
   - 7(count of 871), null values 
   - 9(count of 5003), avg of $91K
   - 10(count of 99), avg of $3.5M
+  
+ #### Things to Consider:
+ + The description field includes a lot of text with interesting kewords.  It would be interesting to dive into this using the Python NLTK library.
+    - specific departments are often mentioned
+    - very specific equipment or details services
+    - in some cases the service or product is needed "immediately"
 
 
