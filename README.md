@@ -15,5 +15,8 @@ The Solicitations dataset displays guidlines for businesses to submit bids for s
     - specific departments are often mentioned
     - very specific equipment or details services
     - in some cases the service or product is needed "immediately"
++ How do solicitions change over time?  This dataset includes this information going back to at least 1996.
+  - can city solicitations be directly tracked to larger changes in the economy during this time?
+  - how does the percentage of solicitations in each category change over time?  
 
 
