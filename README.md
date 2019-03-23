@@ -1,6 +1,6 @@
 # City of Scottsdale Solicitations
 
-The Solicitations dataset displays guidlines for businesses to submit bids for specific projects the city is undertaking.  Some of these seem to be recurring, such as landscaping services, others seem to be one time expenditures.  It's one of the least interesting datasets on the face of it, but I'm interested in what sorts of things I can spot.
+The [Purchasing Solicitations](http://data.scottsdaleaz.gov/dataset/purchasingsolicitations)* dataset displays guidlines for businesses to submit bids for specific projects the city is undertaking.  Some of these seem to be recurring, such as landscaping services, others seem to be one time expenditures.  It's one of the least interesting datasets on the face of it, but I'm interested in what sorts of things I can spot.
 
 #### EDA
 + 994 solicitations have a date of '1900-01-01'(probably a proxy for no date).  1996 seems to be the first year of normal looking dates.
@@ -18,5 +18,10 @@ The Solicitations dataset displays guidlines for businesses to submit bids for s
 + How do solicitions change over time?  This dataset includes this information going back to at least 1996.
   - can city solicitations be directly tracked to larger changes in the economy during this time?
   - how does the percentage of solicitations in each category change over time?  
+  
+  
+  
+*Contains information from the City of Scottsdale Open Database Portal, which is made available here under the [Open Database License](http://www.scottsdaleaz.gov/AssetFactory.aspx?did=69351).
+
 
 
