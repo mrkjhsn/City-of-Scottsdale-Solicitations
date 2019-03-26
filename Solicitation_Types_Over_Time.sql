@@ -39,67 +39,67 @@ left join (select
 			group by year([CloseDate])) as C on C._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Sole_Source
+			,count(*) as SoleSource
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Sole Source'
 			group by year([CloseDate])) as D on D._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Other_Government_Contract
+			,count(*) as OtherGovernmentContract
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Other Government Contract'
 			group by year([CloseDate])) as E on E._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Request_For_Proposal
+			,count(*) as RequestForProposal
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Request For Proposal'
 			group by year([CloseDate])) as F on F._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Request_For_Quotation
+			,count(*) as RequestForQuotation
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Request For Quotation'
 			group by year([CloseDate])) as G on G._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Pricing_Agreement
+			,count(*) as PricingAgreement
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Pricing Agreement'
 			group by year([CloseDate])) as H on H._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Informal_Request_For_Proposal
+			,count(*) as InformalRequestForProposal
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Informal Request For Proposal'
 			group by year([CloseDate])) as I on I._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Statement_of_Qualifications
+			,count(*) as StatementofQualifications
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Statement of Qualifications'
 			group by year([CloseDate])) as J on J._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Offer_to_Purchase
+			,count(*) as OffertoPurchase
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Offer to Purchase'
 			group by year([CloseDate])) as K on K._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Sole_Source_Exclusion_of_Alternates
+			,count(*) as SoleSourceExclusionofAlternates
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Sole Source Exclusion of Alternates'
 			group by year([CloseDate])) as L on L._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Request_For_Qualifications
+			,count(*) as RequestForQualifications
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Request For Qualifications'
 			group by year([CloseDate])) as M on M._Year_ = year(A.[CloseDate])
 left join (select
 			year([CloseDate]) as _Year_
-			,count(*) as Request_For_Information
+			,count(*) as RequestForInformation
 			from [dbo].[fs_Solicitations$]
 			where [SoliciationType] like 'Request For Information'
 			group by year([CloseDate])) as N on N._Year_ = year(A.[CloseDate])
