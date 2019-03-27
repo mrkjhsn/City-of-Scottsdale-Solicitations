@@ -12,17 +12,17 @@ select
 	year(A.[CloseDate]) as _Year_
 	,B.EmergencyPurchase
 	,C.PublicBid
-	,D.Sole_Source
-	,E.Other_Government_Contract
-	,F.Request_For_Proposal
-	,G.Request_For_Quotation
-	,H.Pricing_Agreement
-	,I.Informal_Request_For_Proposal
-	,J.Statement_of_Qualifications
-	,K.Offer_to_Purchase
-	,L.Sole_Source_Exclusion_of_Alternates
-	,M.Request_For_Qualifications
-	,N.Request_For_Information
+	,D.SoleSource
+	,E.OtherGovernmentContract
+	,F.RequestForProposal
+	,G.RequestForQuotation
+	,H.PricingAgreement
+	,I.InformalRequestForProposal
+	,J.StatementofQualifications
+	,K.OffertoPurchase
+	,L.SoleSourceExclusionofAlternates
+	,M.RequestForQualifications
+	,N.RequestForInformation
 
 from [dbo].[fs_Solicitations$] as A
 left join (select
@@ -104,8 +104,8 @@ left join (select
 			where [SoliciationType] like 'Request For Information'
 			group by year([CloseDate])) as N on N._Year_ = year(A.[CloseDate])
 			
-group by year([CloseDate]), B.EmergencyPurchase, C.PublicBid, D.Sole_Source, E.Other_Government_Contract
-	,F.Request_For_Proposal ,G.Request_For_Quotation ,H.Pricing_Agreement ,I.Informal_Request_For_Proposal
-	,J.Statement_of_Qualifications ,K.Offer_to_Purchase ,L.Sole_Source_Exclusion_of_Alternates ,M.Request_For_Qualifications
-	,N.Request_For_Information
+group by year([CloseDate]), B.EmergencyPurchase, C.PublicBid, D.SoleSource, E.OtherGovernmentContract
+	,F.RequestForProposal ,G.RequestForQuotation ,H.PricingAgreement ,I.InformalRequestForProposal
+	,J.StatementofQualifications ,K.OffertoPurchase ,L.SoleSourceExclusionofAlternates ,M.RequestForQualifications
+	,N.RequestForInformation
 order by year(A.[CloseDate]) desc
